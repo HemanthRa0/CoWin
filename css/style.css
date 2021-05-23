@@ -61,7 +61,7 @@ button{
     font-size: x-large;
     font-weight: bolder;
     top: 30%;
-    left: 96;
+    left: 86;
     z-index: 2;
 }
 .textbox{
@@ -136,10 +136,9 @@ h3{
     font-weight: bolder;
 }
 .scroll-bg{
-    background: transparent;
+    background:transparent;
     padding-top: 10% ;
-    padding-right: 10%;
-    width: 550px;
+    padding-right: 2%;
     margin: 10% auto;
 }
 ::-webkit-scrollbar{
@@ -160,11 +159,12 @@ h3{
     border-radius: 8px;
 }
 .scroll-div{
-    width: 500px;
+    width: 800px;
     background: transparent;
-    height: 500px;
+    height: 650px;
     overflow: hidden;
     overflow-y: scroll;
+    
 }
 .scroll-object{
     color:#ffffff;
@@ -173,7 +173,67 @@ h3{
     padding: 10px;
 }
 .colourchange{
-    color: #7cff40;
+    color: #5ee4d9;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+}
+.statename{
+    color: #ffffff;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+}
+.districtname{
+    color: #ffffff;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+}
+.address{
+    color: #ffffff;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+}
+.vaccine{
+    color: #ffffff;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+}
+.dose1{
+    color: #ffffff;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+}
+.dose2{
+    color: #ffffff;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+}
+.age{
+    color: #ffffff;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+}
+.fee{
+    color: #ffffff;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+}
+.from{
+    color: #ffffff;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+}
+.to{
+    color: #ffffff;
     font-family: sans-serif;
     font-weight: bold;
     font-size: 28px;

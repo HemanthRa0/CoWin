@@ -1,14 +1,79 @@
 const render = function(data){
     const content = document.getElementById('content');
     
-    for(let state of data.sessions){
+    for(let center of data.sessions){
+
+        const br_begin_div = document.createElement('br');
+
         const div = document.createElement('div');
-        div.innerText = state.name;
+        div.className = 'colourchange';
+        div.innerText = center.name;
+        
+        const state_div = document.createElement('div');
+        state_div.className = 'statename';
+        state_div.innerText = center.state_name;
+        
+        const district_div = document.createElement('div');
+        district_div.className = 'districtname';
+        district_div.innerText = center.district_name;
+        
+        const address_div = document.createElement('div');
+        address_div.className = 'address';
+        address_div.innerText = center.address;
+
+        const vaccine_div = document.createElement('div');
+        vaccine_div.className = 'vaccine';
+        vaccine_div.innerText = center.vaccine;
+
+        const dose1_div = document.createElement('div');
+        dose1_div.className = 'dose1';
+        dose1_div.innerText = center.available_capacity_dose1;
+
+        const dose2_div = document.createElement('div');
+        dose2_div.className = 'dose2';
+        dose2_div.innerText = center.available_capacity_dose2;
+
+        const age_div = document.createElement('div');
+        age_div.className = 'age';
+        const buff = 'Age : '
+        age_div.innerText = buff+center.min_age_limit;
+
+        const fee_div = document.createElement('div');
+        fee_div.className = 'fee';
+        fee_div.innerText = center.fee;
+
+        const from_div = document.createElement('div');
+        from_div.className = 'from';
+        from_div.innerText = center.from;
+
+        const to_div = document.createElement('div');
+        to_div.className = 'to';
+        to_div.innerText = center.to;
+        
+        const br_end = document.createElement('br');
+
+        const hr_div = document.createElement('hr');
+
+        div.appendChild(state_div);
+        div.appendChild(district_div);
+        div.appendChild(address_div);
+        div.appendChild(vaccine_div);
+        div.appendChild(dose1_div);
+        div.appendChild(dose2_div);
+        div.appendChild(age_div);
+        div.appendChild(fee_div);
+        div.appendChild(from_div);
+        div.appendChild(to_div);
+        div.appendChild(br_end);
+        div.appendChild(hr_div);
+        div.appendChild(br_begin_div);
+
+
         content.appendChild(div);
     }
 };
 
-const parseJon = function(data) {
+const parseJson = function(data) {
     return data.json();
 }
 
@@ -17,7 +82,7 @@ const fetchDetails = function(){
     const pincode = document.getElementById('pincode').value;
     const unformattedDate = document.getElementById('input_date').value;
     const date = unformattedDate.split('-').reverse().join('-');
-    fetch(`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=${pincode}&date=${date}`).then(parseJon).then(render);
+    fetch(`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=${pincode}&date=${date}`).then(parseJson).then(render);
 };
 
 const setup = function(){

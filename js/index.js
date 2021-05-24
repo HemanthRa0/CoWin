@@ -103,7 +103,7 @@ const parseJson = function(data) {
 }
 
 const fetchDetails = function(){
-    console.log("testing")
+    console.log("What are you doing here!");
     const pincode = document.getElementById('pincode').value;
     const unformattedDate = document.getElementById('input_date').value;
     const date = unformattedDate.split('-').reverse().join('-');
@@ -131,11 +131,9 @@ const setup = function(){
 };
 
 window.onload = setup;
-window.onload = function(){
 window.addEventListener("orientationchange", function(event) {
     console.log("the orientation of the device is now " + event.target.screen.orientation.angle);
     if(event.target.screen.orientation.angle === 0){
         this.alert("Please rotate your device");
     }
   });
-};

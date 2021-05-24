@@ -1,3 +1,6 @@
+if(window.innerHeight > window.innerWidth){
+    alert("Please use Landscape mode!")
+}
 const render = function(data){
     
     const content = document.getElementById('content');
@@ -131,9 +134,3 @@ const setup = function(){
 };
 
 window.onload = setup;
-window.addEventListener("orientationchange", function(event) {
-    console.log("the orientation of the device is now " + event.target.screen.orientation.angle);
-    if(event.target.screen.orientation.angle === 0){
-        this.alert("Please rotate your device");
-    }
-  });

@@ -138,7 +138,7 @@ h3{
 }
 .scroll-bg{
     background:transparent;
-    padding-top: 18%;
+    padding-top: 20%;
     padding-right: 20%;
     margin: 10% auto;
 }
@@ -160,9 +160,9 @@ h3{
     border-radius: 8px;
 }
 .scroll-div{
-    width: 800px;
+    width: 700px;
     background: transparent;
-    height: 500px;
+    height: 400px;
     overflow: hidden;
     overflow-y: scroll;
 }
